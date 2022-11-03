@@ -3,23 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- CSS Customize -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- animate.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <nav class="navbar sticky-top" style="background-color: #C2E6EB;">
+    <nav class="navbar sticky-top">
         <div class="container-fluid d-flex justify-content-center">
-            <a class="navbar-brand" href="https://ping-pongsakorn.online/bf">Brute-Force <i class="bi bi-lock-fill"></i> </a>
+            <a class="navbar-brand mt-4" style="font-family: 'Lemon', cursive;" href="#"><span class="brandText"></span><i class="fa-sharp fa-beat-fade fa-solid fa-shield-halved m-2" style="--fa-beat-fade-opacity: 0.5; --fa-beat-fade-scale: 1.25;"></i>
+            </a>
         </div>
     </nav>
+    <script>
+        var typed = new Typed('.brandText', {
+            strings: ['Brute Force'],
+            typeSpeed: 80,
+            loop: true,
+            backDelay: 10000,
+            showCursor: false
+        });
+    </script>
 
     <div class="container d-flex justify-content-center">
         <div class="card text-center mt-4 d-flex justify-content-center shadow p-3 bg-body rounded" style="width:fit-content;">
@@ -52,7 +69,7 @@
 
                 <div class="d-grid">
 
-                        <button type="button" onclick="showTable();" name="loop" class="btn btn-sm btn-outline-info mt-4">Start Brute-Force <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                        <button type="button" onclick="showTable();" name="loop" class="btn btn-sm btn-outline-info mt-4 glow-on-hover">Start Brute-Force <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
                         <lord-icon
                             src="https://cdn.lordicon.com/dykrlspk.json"
                             trigger="hover"
@@ -117,8 +134,10 @@
 
 
 
+     <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/a5d7497aeb.js" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 
 </html>
