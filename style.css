@@ -57,3 +57,9 @@
     animation: headShake;
     animation-duration: 1s;
 }
+
+.scrollNav {
+    background-color: #8c2425 !important;
+    transition: background-color 200ms linear;
+    --bs-navbar-brand-color: white;
+}
