@@ -52,9 +52,7 @@
                 <input type="range" class="form-range" min="0" max="999" value="0" oninput="check()" id="inputRange">
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping">Value</span>
-                    <form action="" method="post">
-                        <input id="inputValue" value="0" oninput="check()" type="text" class="form-control" placeholder="Input Number 0 - 999" maxlength="3" aria-label="toSolve" aria-describedby="addon-wrapping">
-                    </form>
+                    <input id="inputValue" value="0" oninput="check()" type="text" class="form-control" placeholder="Input Number 0 - 999" maxlength="3" aria-label="toSolve" aria-describedby="addon-wrapping">
                 </div>
 
                 <script>
@@ -89,11 +87,6 @@
                 </tr>
             </thead>
             <tbody id="tableBody">
-                <!-- <tr>
-                    <td scope="row" id="#">1</td>
-                    <td id="rand">723</td>
-                    <td id="status">0</td>
-                <!-- </tr>  -->
                 <script>
                     $('#startBf').click(function() {
                         $('#tableBody').empty();
@@ -105,11 +98,8 @@
                         var status = "- - - - -";
 
                         for (let i = 0; i < 1000; i++) {
-                            // rand = Math.floor(Math.random() * 1000);
                             randList.push(i)
                         };
-
-
 
                         // Change position in array random Order
                         randList.sort(function() {
@@ -140,19 +130,12 @@
                             }
 
                         }
-                        //     }));
-                        //     // Todo ทำแยก ให้ทำ Loop แล้วเช็ตว่าเจอเลขที่ตรงมั้ย ถ้าลูปจนตรง มา loop ให้แสดงผลอีกที
-                        // }
-
+                        //Todo ทำแยก ให้ทำ Loop แล้วเช็ตว่าเจอเลขที่ตรงมั้ย ถ้าลูปจนตรง มา loop ให้แสดงผลอีกที
                     })
                 </script>
             </tbody>
         </table>
     </div>
-
-
-
-
 
 
 
