@@ -92,24 +92,22 @@
                 <script>
                     $('#startBf').click(function() {
                         $('#tableBody').empty();
-                        var value = $("#inputValue").val();
-                        console.log("Value : " + value);
+                        var value = $("#inputValue").val(); //ดึง value จาก inputValue
+                        console.log("Value : " + value); //แสดงออกทาง Console
                         // loop
-                        var randList = new Array();
+                        var randList = new Array(); //Create Array 
                         var text = '';
                         var status = "- - - - -";
-
-                        for (let i = 0; i < 1000; i++) {
+                        for (let i = 0; i < 1000; i++) { //loop add 1000 int to array
                             randList.push(i)
                         };
-
                         // Change position in array random Order
                         randList.sort(function() {
                             return 0.5 - Math.random()
                         });
-                        console.log(randList);
+                        console.log(randList); //แสดงออกทาง Console
                         for (let i = 1; i < randList.length + 1; i++) {
-                            if (randList[i - 1] == value) {
+                            if (randList[i - 1] == value) { //Display row that value equal to random number
                                 text += '<tr id=\"' + i + '\">';
                                 text += '<td>' + i + '</td>';
                                 text += '<td>' + randList[i - 1] + '</td>';
@@ -118,14 +116,11 @@
                                 text += '</tr>';
                                 $("tbody").prepend(text);
                                 var text = '';
-
-
                                 $('tr#' + i).attr({
                                     'style': 'background-color: #268c24'
                                 });
-
                                 break;
-                            } else {
+                            } else { //Display row mormally
                                 text += '<tr id=\"' + i + '\">';
                                 $('tr').removeClass("red");
                                 text += '<td>' + i + '</td>';
@@ -135,9 +130,7 @@
                                 $("tbody").prepend(text);
                                 var text = '';
                             }
-
                         }
-                        //Todo ทำแยก ให้ทำ Loop แล้วเช็ตว่าเจอเลขที่ตรงมั้ย ถ้าลูปจนตรง มา loop ให้แสดงผลอีกที
                     })
                 </script>
             </tbody>
