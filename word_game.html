@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the WORD</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS Customize -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- animate.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+    <script src="./hilitor.js"></script>
+    <nav class="navbar sticky-top" id="navbar">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand mt-1 mb-1" style="font-family: 'Lemon', cursive;" href="index.html"><span class="brandText"></span><i class="fa-sharp fa-beat-fade fa-solid fa-shield-halved m-2" style="--fa-beat-fade-opacity: 0.5; --fa-beat-fade-scale: 1.25;"></i>
+            </a>
+        </div>
+    </nav>
+    <script>
+        var typed = new Typed('.brandText', {
+            strings: ['Brute Force'],
+            typeSpeed: 80,
+            loop: true,
+            backDelay: 10000,
+            showCursor: false
+        });
+    </script>
+    <div class="container" style="font-family: 'Mitr', sans-serif;">
+
+        <div class="card my-2 d-flex justify-content-center shadow-lg p-3 bg-body rounded">
+
+            <div class="card-body">
+                <h2 style="text-align: center; font-weight: 500;">Find the WORD in this sentence</h2>
+
+                <h4 id="sentence" class="text-center my-4 fst-italic fw-light fs-5"></h4>
+                <div class="input-group my-2">
+                    <input type="text" id="textField" class="form-control" placeholder="text to find" aria-label="text to find" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button id="launchBtn" class="btn btn-outline-secondary" type="button">Launch</button>
+                    </div>
+                </div>
+                <p id="resultMessage" class="text-center fs-5">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const sentence = [
+                'I have lived in London for five years.',
+                'This company has established since 1994.',
+                'Dogs have positive body language with humans.',
+                'There is no doubt that Taylor is the best in songwriting.',
+                'Another key thing to remember is do not forget your concert ticket.',
+                'Otters may put on a cute front but inside they are predators.',
+                'Celebrities may put on a perfect front but inside they are also normal.',
+                'The lesser you spend, the more you save.',
+                'The reason why I respect him is that he speaks for people.',
+                'It is time for me to say goodbye.',
+                'Worry less, smile more.',
+                'Stay strong, the weekend is coming.',
+                'When I\'m with you, I feel like home.',
+                'We\'re safely using an apostrophe in single quotes.',
+                'ผู้ชนะ ไม่ใช่คนที่ไม่เคยล้มเหลว',
+                'จงใช้ชีวิตให้เหมือนเต่า ถึงแม้มันจะเดินช้า แต่มันก็ไม่เคยเดินถอยหลัง',
+                'เดินหน้า ไม่ได้อยู่ที่ขา แต่อยู่ที่ใจ',
+                'พยายามครั้งที่ร้อย ยังดีกว่าท้อถอยทั้งที่ยังไม่ได้ทำ',
+                'ความล้มเหลวที่น่ากลัวที่สุด คือการกลัวที่จะเริ่มต้นตั้งแต่แรก',
+                'ไม่มีความสำเร็จไหนที่ไม่ต้องใช้ความพยายาม',
+                'ความลำบากที่เกินทน จะหลอมคนให้ทนทาน',
+                'Jacobs was an Australian collector and publisher of England\'s folklore, and authored  English Fairy Tales. The goal of his work was to popularize folk tales of England among children and adults, as many readers were caught up in the folk tales of Germany and France at the time.',
+                'Jacobs is one of the most known English storytellers of folk tales and fairy tales, and his work also helped preserve ballads, after he wrote them as tales. He later published a second volume, More English Fairy Tales.',
+                'The country\'s folklore has its own dialect, with each region\'s tale offering something new for the reader. The characters within the stories include mythical creatures or spirits such as brownies, elves, boggarts, ogres, giants and trolls. You’ll also encounter heroes, cunning folk (wizards), and plenty of royalty in the English folk tales.',
+                'Mr. Vinegar could listen no longer; his terror was so great that he trembled and trembled, and shook down the door on their heads. Away scampered the thieves, but Mr. Vinegar dared not quit his retreat till broad daylight.',
+                'So he offers the forty guineas for the cow, and the owner said that, as he was a friend, he\'d oblige him. So the bargain was made, and he got the cow and he drove it backwards and forwards to show it.',
+                'There were once a Scotsman and an Englishman and an Irishman serving in the army together, who took it into their heads to run away on the first opportunity they could get. The chance came and they took it.',
+                'Accordingly he went in to where she was, and she opened a large room for him, where he saw a number of men lying asleep. She then set food before him, and after that showed him to the room where the others were. He lay down on one of the beds and fell sound asleep. And now we must go back to the two that he left behind him in the wood.',
+                'When nightfall and the time of the wild beasts came upon these, the Englishman happened to climb up into the very same tree on which the Scotsman was when he got a sight of the castle',
+                'เรามัดใจใครไม่ได้หรอก ขนาดมัดผมยังลำบากเลย',
+                'น้ำขึ้นให้รีบตัก ผู้ชายทักให้รีบตอบ',
+                'กลางคืนอย่างห้าว ตอนเช้าอย่างง่วง',
+                'อย่าทำให้หลงได้ไหม น้ำมันแพง',
+                'อยากมีคนใส่ใจ ที่ไม่ใช่ป้าข้างบ้าน',
+                'แม่ใช้ให้เด็ดพริก 10 เม็ด แต่ฉันเด็ด 11 เม็ด เพราะฉันเด็ดเกิน',
+                'ไปดูดวงมา หมอดูทักว่า สวัสดี!',
+                'ปีนี้เราจะเสียน้ำตาให้กับ ATK เท่านั้น',
+                'ลุคไหนก็ไม่สดใสเท่า ลุกไปหาอะไรกินคร้าบ',
+                'ไว้ผมมาตั้งนาน นึกว่าผมจะยาวที่ไหนได้ ผมชอบคุณ',
+                'วันนี้ไม่เห็นค่า ไม่เป็นไรวันหน้าเดี๋ยวมาใหม่',
+                'ช่วงนี้อ่อนไหวง่าย แค่เห็นควันไฟก็อยากกินหมูกระทะ',
+                'ความเจริญเดียวที่มีตอนนี้คือ เจริญอาหาร',
+                'เหงานิดหน่อย แต่กินข้าวอร่อยเหมือนเดิม',
+                'จะหมดปีเเล้ว ยังไม่มีอะไรดีๆ เลย นอกจากหน้าตา'
+            ];
+
+            var randNum = Math.floor(Math.random() * sentence.length);
+            console.log("Total sentence available : " + sentence.length);
+            console.log("random : " + randNum);
+            $('#sentence').text(sentence[randNum]);
+
+            $('#launchBtn').click(function() { //after click
+                console.log($('#textField').val());
+                var target = $('#textField').val()
+                var indexOfWord = sentence[randNum].search(target)
+                if (!target) {
+                    indexOfWord = -1;
+                }
+                console.log(indexOfWord);
+                $("#resultMessage").html('Index of ' + '<span class="fst-italic fw-semibold">' +
+                    target + '</span>' + ' in sentence is ')
+                $("#resultMessage").append('<span class="badge text-bg-warning">' + indexOfWord + '</span>');
+
+                var myHilitor = new Hilitor("sentence");
+                myHilitor.apply(target);
+            })
+        });
+    </script>
+
+
+
+    <!-- Javascript -->
+    <script src="./index.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a5d7497aeb.js" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>
