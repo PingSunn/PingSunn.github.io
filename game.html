@@ -118,11 +118,16 @@
                                 text += '</tr>';
                                 $("tbody").prepend(text);
                                 var text = '';
-                                $('tr#' + i).attr('class', 'table-success');
+
+
+                                $('tr#' + i).attr({
+                                    'style': 'background-color: #268c24'
+                                });
+
                                 break;
                             } else {
                                 text += '<tr id=\"' + i + '\">';
-                                $('tr').removeClass("table-success");
+                                $('tr').removeClass("red");
                                 text += '<td>' + i + '</td>';
                                 text += '<td>' + randList[i - 1] + '</td>';
                                 text += '<td>' + status + '</td>';

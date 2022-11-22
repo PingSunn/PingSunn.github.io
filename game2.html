@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the WORD</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS Customize -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- animate.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+    <nav class="navbar sticky-top" id="navbar">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand mt-1 mb-1" style="font-family: 'Lemon', cursive;" href="#"><span class="brandText"></span><i class="fa-sharp fa-beat-fade fa-solid fa-shield-halved m-2" style="--fa-beat-fade-opacity: 0.5; --fa-beat-fade-scale: 1.25;"></i>
+            </a>
+        </div>
+    </nav>
+    <script>
+        var typed = new Typed('.brandText', {
+            strings: ['Brute Force'],
+            typeSpeed: 80,
+            loop: true,
+            backDelay: 10000,
+            showCursor: false
+        });
+    </script>
+    <div class="container" style="font-family: 'Mitr', sans-serif; font-weight: 600;">
+
+        <div class="card my-2 d-flex justify-content-center shadow-lg p-3 bg-body rounded">
+
+            <div class="card-body">
+                <h2 style="text-align: center; font-weight: 600;">Find the WORD in this sentence</h2>
+
+                <h5 id="sentence"></h5>
+                <div class="input-group my-3">
+                    <input type="text" id="textField" class="form-control" placeholder="text to find" aria-label="text to find" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button id="launchBtn" class="btn btn-outline-secondary" type="button">Launch</button>
+                    </div>
+                </div>
+                <h4 id="resultMessage" class="text-center"></h4>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var sentence = ["Brute force search considers each and every state of a tree, and the state is represented in the form of a node. As far as the starting position is concerned, we have two choices, i.e., A state and B state. We can either generate state A or state B. In the case of B state, we have two states, i.e., state E and F.", "In the case of brute force search, each state is considered one by one. As we can observe in the above tree that the brute force search takes 12 steps to find the solution.", "On the other hand, backtracking, which uses Depth-First search, considers the below states only when the state provides a feasible solution. Consider the above tree, start from the root node, then move to node A and then node C. If node C does not provide the feasible solution, then there is no point in considering the states G and H. We backtrack from node C to node A. Then, we move from node A to node D. Since node D does not provide the feasible solution, we discard this state and backtrack from node D to node A.", "We move to node B, then we move from node B to node E. We move from node E to node K; Since k is a solution, so it takes 10 steps to find the solution. In this way, we eliminate a greater number of states in a single iteration. Therefore, we can say that backtracking is faster and more efficient than the brute force approach."];
+            var randNum = Math.floor(Math.random() * 4);
+            console.log(randNum);
+            $('#sentence').text(sentence[randNum]);
+            $('#launchBtn').click(function() {
+                console.log($('#textField').val());
+                var target = $('#textField').val()
+                var indexOfWord = sentence[randNum].indexOf(target)
+                if (!target) {
+                    indexOfWord = -1;
+                }
+                console.log(indexOfWord);
+                $("#resultMessage").text("Index of " + target + " in sentence is " + indexOfWord)
+            })
+        });
+    </script>
+
+
+
+    <!-- Javascript -->
+    <script src="./index.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a5d7497aeb.js" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>
