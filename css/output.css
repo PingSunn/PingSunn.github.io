@@ -663,6 +663,16 @@ video {
   margin-bottom: 10%;
 }
 
+.my-\[6\%\]{
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
+.my-\[5\%\]{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
