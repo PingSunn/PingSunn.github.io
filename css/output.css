@@ -620,8 +620,8 @@ video {
   left: 0px;
 }
 
-.right-2{
-  right: 0.5rem;
+.right-\[4vw\]{
+  right: 4vw;
 }
 
 .start-0{
@@ -632,8 +632,8 @@ video {
   top: 0px;
 }
 
-.top-2{
-  top: 0.5rem;
+.top-\[3vh\]{
+  top: 3vh;
 }
 
 .z-10{
@@ -999,11 +999,6 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
 }
 
 .text-center{
