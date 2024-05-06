@@ -620,8 +620,8 @@ video {
   left: 0px;
 }
 
-.right-\[4vw\]{
-  right: 4vw;
+.right-\[10\%\]{
+  right: 10%;
 }
 
 .start-0{
@@ -632,8 +632,16 @@ video {
   top: 0px;
 }
 
-.top-\[3vh\]{
-  top: 3vh;
+.top-\[3\%\]{
+  top: 3%;
+}
+
+.top-\[4\%\]{
+  top: 4%;
+}
+
+.right-\[11\%\]{
+  right: 11%;
 }
 
 .z-10{
