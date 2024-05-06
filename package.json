@@ -4,6 +4,7 @@
         "tailwindcss": "^3.4.3"
     },
     "dependencies": {
+        "ldrs": "^1.0.1",
         "sweetalert": "^2.1.2"
     }
 }
