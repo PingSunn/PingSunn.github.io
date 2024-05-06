@@ -7,7 +7,7 @@
     <title>Test your taste</title>
     <link href="./css/output.css" rel="stylesheet">
     <!-- <script src="./js/data.js"></script> -->
-    <script src="./js/image.js"></script>
+    <!-- <script src="./js/image.js"></script> -->
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Sweeralert -->
@@ -79,19 +79,20 @@
         </div>
     </div>
 
-    <!-- Popup Image -->
     <div id="imagePopup" class="popup-hidden fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-75">
-        <div id="popupContent" class="bg-white rounded-lg py-5 flex items-center justify-center">
-            <img id="popupImage" src="" alt="Popup Image" class="max-h-[100vh] max-w-[100%] rounded-lg hover:shadow-2xl" />
+        <div id="popupContent" class="bg-white rounded-lg py-5 flex flex-col items-center justify-center relative max-h-[90vh] max-w-[90%]">
+            <span id="closeButton" class="absolute top-2 right-2 cursor-pointer text-gray-500 hover:text-black transition duration-300">
+                <i class="bx bx-x-circle bx-lg"></i> <!-- Close icon -->
+            </span>
+            <img id="popupImage" src="" alt="Popup Image" class="max-h-[90vh] max-w-[90%] rounded-lg hover:shadow-2xl" />
         </div>
-
     </div>
 
     <script>
         function showImage(imageUrl) {
             // Display the popup
             var popup = document.getElementById('imagePopup');
-            popup.classList.remove('popup-hidden')
+            popup.classList.remove('popup-hidden');
             popup.style.display = 'flex';
 
             // Set the image source
@@ -103,13 +104,14 @@
             popupImage.style.maxHeight = '90vh'; // Adjust the max height as needed
         }
 
-        // Close the popup when clicked outside the image
+        // Close the popup when clicked outside the image or on the close button
         document.getElementById('imagePopup').addEventListener('click', function(event) {
-            if (event.target === this) {
-                this.style.display = 'none';
+            if (event.target === this || event.target.id === 'closeButton') {
+                this.classList.add('popup-hidden');
             }
         });
     </script>
+
 
 </body>
 
