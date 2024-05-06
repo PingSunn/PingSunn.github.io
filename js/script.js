@@ -120,5 +120,5 @@ function show() {
 }
 
 function warp(sum) {
-    window.location.href = "/Website_YourType/result.html?value=" + sum;
+    window.location.href = "/result.html?value=" + sum;
 }
