@@ -9,8 +9,8 @@ const result = {
     "20,21,44": "./asset/img/coffee.png",
     "23,27,45": "./asset/img/rose.png",
     "24,29,46": "./asset/img/milk.png",
-    "22,25,26,47": "./asset/img/mali.png",
-    "26,31,35,48": "./asset/img/lemon.png"
+    "22,26,47": "./asset/img/mali.png",
+    "31,35,48": "./asset/img/lemon.png"
 }
 
 document.addEventListener('DOMContentLoaded', function() {
