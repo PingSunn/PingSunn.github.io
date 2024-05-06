@@ -653,6 +653,11 @@ video {
   margin-bottom: 10%;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
