@@ -23,3 +23,51 @@
 .popup-hidden {
     display: none;
 }
+
+.blur-load {
+    background-size: cover;
+    background-position: center;
+}
+
+.blur-load {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* 
+.blur-load::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: pulse 2.5s infinite;
+    background-color: var(--text-color);
+} */
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* .blur-load.loaded::before {
+    animation: none;
+    content: none;
+} */
+
+.blur-load img {
+    opacity: 0;
+    transition: opacity 800ms ease-in-out;
+}
+
+.blur-load.loaded img {
+    opacity: 1;
+}
