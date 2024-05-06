@@ -612,6 +612,10 @@ video {
   position: relative;
 }
 
+.left-0{
+  left: 0px;
+}
+
 .start-0{
   inset-inline-start: 0px;
 }
@@ -663,8 +667,16 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .ml-5{
   margin-left: 1.25rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .mr-5{
@@ -681,14 +693,6 @@ video {
 
 .mt-\[8vh\]{
   margin-top: 8vh;
-}
-
-.ml-2{
-  margin-left: 0.5rem;
-}
-
-.mr-2{
-  margin-right: 0.5rem;
 }
 
 .flex{
@@ -727,8 +731,16 @@ video {
   height: auto;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .h-screen{
   height: 100vh;
+}
+
+.max-h-\[100vh\]{
+  max-height: 100vh;
 }
 
 .w-4\/6{
@@ -741,6 +753,10 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.max-w-\[100\%\]{
+  max-width: 100%;
 }
 
 .max-w-screen-xl{
@@ -890,6 +906,11 @@ video {
   background-color: rgb(218 189 164 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -903,6 +924,10 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-75{
+  --tw-bg-opacity: 0.75;
 }
 
 .bg-gradient-to-r{
@@ -1044,15 +1069,15 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1108,6 +1133,10 @@ video {
   font-weight: 700;
   font-style: normal;
   font-size: large;
+}
+
+.popup-hidden {
+  display: none;
 }
 
 .hover\:bg-gray-900:hover{
@@ -1200,22 +1229,9 @@ video {
     margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .md\:font-bold{
-    font-weight: 700;
-  }
-
-  .md\:font-semibold{
-    font-weight: 600;
   }
 }
 

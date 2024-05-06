@@ -19,3 +19,7 @@
     font-style: normal;
     font-size: large;
 }
+
+.popup-hidden {
+    display: none;
+}
