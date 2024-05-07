@@ -1444,6 +1444,14 @@ video {
   .xl\:w-\[25\%\]{
     width: 25%;
   }
+
+  .xl\:w-\[42\%\]{
+    width: 42%;
+  }
+
+  .xl\:w-\[20\%\]{
+    width: 20%;
+  }
 }
 
 .rtl\:space-x-reverse:where([dir="rtl"], [dir="rtl"] *) > :not([hidden]) ~ :not([hidden]){
