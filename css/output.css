@@ -725,6 +725,10 @@ video {
   margin-top: 5%;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .flex{
   display: flex;
 }
@@ -815,6 +819,18 @@ video {
 
 .max-w-xl{
   max-width: 36rem;
+}
+
+.max-w-screen-lg{
+  max-width: 1024px;
+}
+
+.max-w-screen-sm{
+  max-width: 640px;
+}
+
+.max-w-\[70\%\]{
+  max-width: 70%;
 }
 
 .cursor-pointer{
@@ -1043,6 +1059,11 @@ video {
 .py-\[5\%\]{
   padding-top: 5%;
   padding-bottom: 5%;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -1305,6 +1326,10 @@ video {
   .sm\:w-\[60\%\]{
     width: 60%;
   }
+
+  .sm\:w-\[\]{
+    width: ;
+  }
 }
 
 @media (min-width: 768px){
@@ -1322,6 +1347,10 @@ video {
 
   .md\:w-\[35\%\]{
     width: 35%;
+  }
+
+  .md\:w-\[45\%\]{
+    width: 45%;
   }
 
   .md\:space-x-0 > :not([hidden]) ~ :not([hidden]){
@@ -1343,6 +1372,10 @@ video {
 
   .lg\:w-\[35\%\]{
     width: 35%;
+  }
+
+  .lg\:w-\[30\%\]{
+    width: 30%;
   }
 
   .lg\:grid-cols-4{
