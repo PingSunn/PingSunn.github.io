@@ -1330,6 +1330,10 @@ video {
   .sm\:w-\[\]{
     width: ;
   }
+
+  .sm\:w-\[50\%\]{
+    width: 50%;
+  }
 }
 
 @media (min-width: 768px){
@@ -1376,6 +1380,10 @@ video {
 
   .lg\:w-\[30\%\]{
     width: 30%;
+  }
+
+  .lg\:w-\[40\%\]{
+    width: 40%;
   }
 
   .lg\:grid-cols-4{
