@@ -636,6 +636,10 @@ video {
   top: 4%;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -744,6 +748,14 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[50\%\]{
+  height: 50%;
+}
+
+.h-\[5\%\]{
+  height: 5%;
 }
 
 .max-h-\[80vh\]{
