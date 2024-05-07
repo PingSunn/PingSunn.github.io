@@ -717,6 +717,14 @@ video {
   margin-bottom: 10%;
 }
 
+.mb-\[2\%\]{
+  margin-bottom: 2%;
+}
+
+.mt-\[5\%\]{
+  margin-top: 5%;
+}
+
 .flex{
   display: flex;
 }
@@ -791,6 +799,10 @@ video {
 
 .w-\[80\%\]{
   width: 80%;
+}
+
+.w-\[75\%\]{
+  width: 75%;
 }
 
 .max-w-\[80\%\]{
@@ -1026,6 +1038,11 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-\[5\%\]{
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .text-center{
