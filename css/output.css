@@ -1402,6 +1402,10 @@ video {
     width: 55%;
   }
 
+  .md\:w-\[20\%\]{
+    width: 20%;
+  }
+
   .md\:space-x-0 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
