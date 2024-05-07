@@ -1000,6 +1000,10 @@ video {
   padding-bottom: 10%;
 }
 
+.pt-\[10\%\]{
+  padding-top: 10%;
+}
+
 .text-center{
   text-align: center;
 }
